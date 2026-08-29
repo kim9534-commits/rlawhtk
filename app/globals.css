@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #e9efea;
+  color: #16302c;
+}
+
+/* 차트페이퍼 텍스처 */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image: repeating-linear-gradient(
+      0deg,
+      rgba(22, 48, 44, 0.035) 0px,
+      rgba(22, 48, 44, 0.035) 1px,
+      transparent 1px,
+      transparent 96px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(22, 48, 44, 0.035) 0px,
+      rgba(22, 48, 44, 0.035) 1px,
+      transparent 1px,
+      transparent 96px
+    );
+}
